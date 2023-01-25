@@ -3,4 +3,5 @@ Package for calculating Persistent Homology-based functional connectivity measur
 
 # Usage
 library(devtools)
+
 install_github("hyunnamryu/PHfconn")
