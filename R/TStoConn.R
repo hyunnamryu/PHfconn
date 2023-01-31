@@ -14,7 +14,7 @@
 
 
 
-TStoConn <- function(TS, is.abs=FALSE){
+TStoConn <- function(ts, is.abs=FALSE){
   #######################################
   ## when all ts values are 0 or have the exactly same ts's each other
 
