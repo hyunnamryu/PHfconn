@@ -2,7 +2,7 @@
 #' @description \code{PH_meas} calculate persistent homology-based functional connectivity measures
 #' @param connectivity a numeric N*N matrix or data frame, of which element represents weighted connectivity between nodes. N is the number of nodes. (e.g. Pearson correlation matrix with diagonal element of 1).
 #'
-#' @returns BS: Backbone Strength, BD: Backbone Dispersion, CS: Cycle strength
+#' @returns BS: Backbone Strength, BD: Backbone Dispersion, CS: Cycle strength, CF: Cycle frequency, aBD: adjusted Backbone Dispersion
 #' @references
 #' Persistent Homology-based Functional Connectivity Explains Cognitive Ability: Life-span Study,
 #' Hyunnam Ryu, Christian G. Habeck, Yaakov Stern, and Seonjoo Lee,
@@ -37,10 +37,13 @@ PH_meas = function(connectivity){
   mB1 = mean(W_out$WB10)
 
   # height of B1 curve until all nodes are connected - the total number of cycles when all nodes are connected
-  #hB1 = length(W_out$WB10)/L
+  hB1 = length(W_out$WB10)/N
   #hB1 = mean(as.numeric(lapply(W_out$WB0,function(x) sum(W_out$W>=x)))/(M+L))
 
-  out = list(BS=mB0,BD=rB0,CS=mB1)
+  # adjusted BD : BD*CF
+  aBD = BD*CF
+
+  out = list(BS=mB0,BD=rB0,CS=mB1,CF=hB1, aBD=aBD)
 
   return(out)
 }
