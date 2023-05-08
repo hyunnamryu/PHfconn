@@ -37,7 +37,7 @@ PH_meas = function(connectivity){
   CS = mean(W_out$WB10)
 
   # height of B1 curve until all nodes are connected - the total number of cycles when all nodes are connected
-  CF = length(W_out$WB10)/N
+  CF = length(W_out$WB10)/L
   #hB1 = mean(as.numeric(lapply(W_out$WB0,function(x) sum(W_out$W>=x)))/(M+L))
 
   # adjusted BD : BD*CF
