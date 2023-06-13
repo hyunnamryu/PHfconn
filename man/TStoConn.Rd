@@ -4,12 +4,12 @@
 \alias{TStoConn}
 \title{Convert Time Series Matrix to Connectivity Matrix for PH calculation}
 \usage{
-TStoConn(TS, is.abs = FALSE)
+TStoConn(ts, is.abs = FALSE)
 }
 \arguments{
-\item{TS}{#time-points(T)*#ROIs(N) timeseries matrix}
-
 \item{is.abs}{logical. TRUE returns a connectivity matrix with absolute correlation coefficient values. Default is FALSE.}
+
+\item{TS}{#time-points(T)*#ROIs(N) timeseries matrix}
 }
 \value{
 K*K symmetric matrix (K is the number of survived ROIs (or voxels) after screening)

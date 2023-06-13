@@ -4,7 +4,7 @@
 \alias{connectivity_weights_set}
 \title{Persistent homology-based weight sets of functional connectivity}
 \usage{
-connectivity_weights_set(connectivity)
+connectivity_weights_set(connectivity, na.rm = FALSE)
 }
 \arguments{
 \item{connectivity}{a numeric N*N matrix or data frame, of which element represents weighted connectivity between nodes. N is the number of nodes. (e.g. Pearson correlation matrix with diagonal element of 1).}

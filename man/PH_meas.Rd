@@ -10,7 +10,7 @@ PH_meas(connectivity)
 \item{connectivity}{a numeric N*N matrix or data frame, of which element represents weighted connectivity between nodes. N is the number of nodes. (e.g. Pearson correlation matrix with diagonal element of 1).}
 }
 \value{
-BS: Backbone Strength, BD: Backbone Dispersion, CS: Cycle strength
+BS: Backbone Strength, BD: Backbone Dispersion, CS: Cycle strength, CF: Cycle frequency, aBD: adjusted Backbone Dispersion
 }
 \description{
 \code{PH_meas} calculate persistent homology-based functional connectivity measures

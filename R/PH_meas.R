@@ -15,12 +15,8 @@
 #' @export
 
 PH_meas = function(connectivity){
-  #### remove totally disconnected nodes
-  ## assumption: complete graph; colSums(connectivity)=0 means the node are disconnected to all the other nodes
-  idx.connected = which(colSums(connectivity)!=0)
-  connectivity = connectivity[idx.connected,idx.connected]
 
-  W_out = connectivity_weights_set(connectivity)
+  W_out = connectivity_weights_set(connectivity, na.rm = TRUE)
   # BC = Betti_curve(connectivity)
 
   N = dim(connectivity)[1]
