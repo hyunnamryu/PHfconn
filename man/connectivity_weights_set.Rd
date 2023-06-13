@@ -8,6 +8,8 @@ connectivity_weights_set(connectivity, na.rm = FALSE)
 }
 \arguments{
 \item{connectivity}{a numeric N*N matrix or data frame, of which element represents weighted connectivity between nodes. N is the number of nodes. (e.g. Pearson correlation matrix with diagonal element of 1).}
+
+\item{na.rm}{logical; whether remove NA values in connectivity matrix}
 }
 \value{
 W : a set of all weights in connectivity matrix.

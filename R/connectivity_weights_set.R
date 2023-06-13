@@ -1,6 +1,7 @@
 #' Persistent homology-based weight sets of functional connectivity
 #' @description \code{connectivity_weights_set} calculate dimension 0 (connected components) and dimension 1 (cycles) persistent homology and generate death weights of dimension 0 topological objects and birth weights of dimension 1 topological objects.
 #' @param connectivity a numeric N*N matrix or data frame, of which element represents weighted connectivity between nodes. N is the number of nodes. (e.g. Pearson correlation matrix with diagonal element of 1).
+#' @param na.rm logical; whether remove NA values in connectivity matrix
 #'
 #' @return W : a set of all weights in connectivity matrix.
 #' @return WB0: a set of added weights when the number of dimension 0 (connected components) topological features decreases by 1.
