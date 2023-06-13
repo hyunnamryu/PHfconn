@@ -41,4 +41,3 @@ connectivity_weights_set = function(connectivity, na.rm=FALSE){
   return(out)
 }
 
-
