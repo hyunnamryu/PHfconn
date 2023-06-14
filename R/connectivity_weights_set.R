@@ -23,8 +23,8 @@ connectivity_weights_set = function(connectivity, na.rm=FALSE){
   # WB11: weights making cycles after all ROIs are connected
 
   if(na.rm) {
-    idx = which(apply(connectivity,1,function(x) sum(!(is.na(x)))==1))
-    connectivity=connectivity[-idx,-idx]
+    idx = !(1:ncol(connectivity) %in% which(apply(connectivity,1,function(x) sum(!(is.na(x)))==1)))
+    connectivity=connectivity[idx,idx]
   }
 
   #### remove totally disconnected nodes
@@ -33,7 +33,7 @@ connectivity_weights_set = function(connectivity, na.rm=FALSE){
   connectivity = connectivity[idx.connected,idx.connected]
 
   W = sort(round(uppermat(connectivity),10),decreasing = T)
-  WB0 = round(1-hclust(as.dist(1-connectivity),method="single")$height,10)
+  WB0 = round(1-stats::hclust(stats::as.dist(1-connectivity),method="single")$height,10)
   WB1 = W[!(W %in% WB0)]
   WB10 = WB1[WB1>=min(WB0)]
   WB11 = WB1[WB1<min(WB0)]

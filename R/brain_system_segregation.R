@@ -2,7 +2,7 @@ brain_system_segregation = function(connectivity, network){
   net = unique(network)
   within = NULL
   between = NULL
-  
+
   for(n in net){
     idx = which(network==n)
     within = c(within,uppermat(connectivity[idx,idx]))
@@ -13,4 +13,3 @@ brain_system_segregation = function(connectivity, network){
   bss = (W-B)/W
   return(bss)
 }
-

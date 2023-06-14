@@ -2,7 +2,7 @@
 #' @description
 #' \code{TStoConn} converts #time-points(T)*#ROIs(N) timeseries matrix or data frame to N*N symmetric connectivity matrix
 #' for PH calculation while while removing ROIs(or voxels) whose values are all zero or all the same.
-#' @param TS #time-points(T)*#ROIs(N) timeseries matrix
+#' @param ts #time-points(T)*#ROIs(N) timeseries matrix
 #' @param is.abs logical. TRUE returns a connectivity matrix with absolute correlation coefficient values. Default is FALSE.
 #'
 #' @returns K*K symmetric matrix (K is the number of survived ROIs (or voxels) after screening)
@@ -24,7 +24,7 @@ TStoConn <- function(ts, is.abs=FALSE){
   if (sum(csa==mcsa)>1) idx = (csa > 0) & (csa > mcsa) ### index if some rois have same ts
   ts=ts[,idx]
 
-  CorMat = cor(ts)
+  CorMat = stats::cor(ts)
   diag(CorMat) = 1
   CorMat = round(CorMat,10)
   if(is.abs) CorMat = abs(CorMat)
@@ -32,3 +32,4 @@ TStoConn <- function(ts, is.abs=FALSE){
   if(sum(is.na(CorMat))!=0) print("NA exists")
   return(CorMat)
 }
+

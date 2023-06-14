@@ -7,9 +7,9 @@
 TStoConn(ts, is.abs = FALSE)
 }
 \arguments{
-\item{is.abs}{logical. TRUE returns a connectivity matrix with absolute correlation coefficient values. Default is FALSE.}
+\item{ts}{#time-points(T)*#ROIs(N) timeseries matrix}
 
-\item{TS}{#time-points(T)*#ROIs(N) timeseries matrix}
+\item{is.abs}{logical. TRUE returns a connectivity matrix with absolute correlation coefficient values. Default is FALSE.}
 }
 \value{
 K*K symmetric matrix (K is the number of survived ROIs (or voxels) after screening)

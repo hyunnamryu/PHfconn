@@ -2,12 +2,12 @@ brain_MST_segregation = function(connectivity, network){
   net = unique(network)
   within = NULL
   between = NULL
-  
+
   for(n in net){
     idx = which(network==n)
     conn = connectivity[idx,idx]
     conn.b = apply(connectivity[idx,-idx],2,max)
-    within = c(within,hclust(as.dist(1-conn),method="single")$height)
+    within = c(within,stats::hclust(stats::as.dist(1-conn),method="single")$height)
     between = c(between,conn.b)
   }
   W = mean(within)
@@ -15,3 +15,4 @@ brain_MST_segregation = function(connectivity, network){
   bms = (W-B)/W
   return(bms)
 }
+
