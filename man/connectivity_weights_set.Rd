@@ -30,3 +30,6 @@ a <- runif(45,-0.5,0.8)
 A <- vectomat(a)
 connectivity_weights_set(A)
 }
+\references{
+Ryu, H., Habeck, C., Stern, Y., & Lee, S. (2023). Persistent homology-based functional connectivity and its association with cognitive ability: Life-span study. Human Brain Mapping, 44( 9), 3669– 3683. https://doi.org/10.1002/hbm.26304
+}

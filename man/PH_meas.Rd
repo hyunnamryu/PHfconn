@@ -22,7 +22,5 @@ PH_meas(A)
 
 }
 \references{
-Persistent Homology-based Functional Connectivity Explains Cognitive Ability: Life-span Study,
-Hyunnam Ryu, Christian G. Habeck, Yaakov Stern, and Seonjoo Lee,
-bioRxiv 2022.10.17.512619; doi: https://doi.org/10.1101/2022.10.17.512619
+Ryu, H., Habeck, C., Stern, Y., & Lee, S. (2023). Persistent homology-based functional connectivity and its association with cognitive ability: Life-span study. Human Brain Mapping, 44( 9), 3669– 3683. https://doi.org/10.1002/hbm.26304
 }

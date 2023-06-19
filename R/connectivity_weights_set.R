@@ -9,6 +9,9 @@
 #' @return WB10: a set of weights making cycles until all nodes are connected. It is a subset of WB1 and complement of WB11. i.e. WB10 U WB11 = WB1.
 #' @return WB11: a set of weights making cycles after all nodes are connected. It is a subset of WB1 and complement of WB10. i.e. WB10 U WB11 = WB1.
 #'
+#' @references
+#' Ryu, H., Habeck, C., Stern, Y., & Lee, S. (2023). Persistent homology-based functional connectivity and its association with cognitive ability: Life-span study. Human Brain Mapping, 44( 9), 3669– 3683. https://doi.org/10.1002/hbm.26304
+#'
 #' @examples
 #' a <- runif(45,-0.5,0.8)
 #' A <- vectomat(a)
